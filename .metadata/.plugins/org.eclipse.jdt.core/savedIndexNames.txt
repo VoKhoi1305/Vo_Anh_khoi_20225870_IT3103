@@ -1,0 +1,3 @@
+INDEX VERSION 1.134+D:\Vo_Anh_khoi_20225870_IT3103\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+1291770370.index
