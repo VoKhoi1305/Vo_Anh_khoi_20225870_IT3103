@@ -18,7 +18,14 @@ public class Aims {
 			DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin",
 			"Animation", 18.99f);
 			anOrder.addDigitalVideoDisc(dvd3);
-
+			
+			Cart anOrder2 = new Cart();
+		 System.out.println("--- Adding DVDs using an array ---");
+	     DigitalVideoDisc[] dvdList = {dvd3};
+	     anOrder2.addDigitalVideoDisc(dvdList); // Add multiple DVDs via array
+	     System.out.println("Total Cost after adding DVDs via array: " + anOrder2.totalCost());
+			
+			
 			//print total cost of the items in the cart
 			System.out.println("Total Cost is: ");
 			System.out. println(anOrder.totalCost());

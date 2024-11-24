@@ -8,11 +8,31 @@ public class Cart {
 	 public void addDigitalVideoDisc(DigitalVideoDisc disc) {
 	        if (totalItems < MAX_NUMBER_OEDERED) {
 	            itemsOrdered[totalItems] = disc; // Add the DVD to the array
-	            totalItems++; // Increment the count of items
-	           
-	        } 
-	    }
+	            totalItems++; // Increment the count of items     
+       } 
+	 }
+	 public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+		    if (totalItems + dvdList.length <= MAX_NUMBER_OEDERED) {
+		        for (int i = 0; i < dvdList.length; i++) {
+		            itemsOrdered[totalItems] = dvdList[i]; 
+		            totalItems++; 
+		        }
+		    } else {
+		        System.out.println("The cart is almost full. Cannot add all DVDs!");
+		    }
+		}
 	
+	 public void addDigitalVideoDisc(DigitalVideoDisc... dvds) {
+	    if (totalItems + dvds.length <= MAX_NUMBER_OEDERED) {
+	        for (int i = 0; i < dvds.length; i++) {
+	            itemsOrdered[totalItems] = dvds[i]; // Thêm DVD trực tiếp vào mảng itemsOrdered
+	            totalItems++; // Cập nhật số lượng item
+	        }
+	    } else {
+	        System.out.println("The cart is almost full. Cannot add all DVDs!");
+	    }
+	}
+	 
 	public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         boolean found = false;
         for (int i = 0; i < totalItems; i++) {
@@ -24,11 +44,12 @@ public class Cart {
                 }
                 itemsOrdered[totalItems - 1] = null; // Clear the last item
                 totalItems--; // Decrement the count of items
-           
                 break;
             }
         }
     }
+	
+	
 	
 	public float totalCost() {
         float total = 0;
