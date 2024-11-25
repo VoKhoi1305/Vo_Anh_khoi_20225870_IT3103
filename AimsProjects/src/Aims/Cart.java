@@ -77,7 +77,7 @@ public class Cart {
     }
 	
 	 public DigitalVideoDisc searchById(int id) {
-	        for (DigitalVideoDisc dvd : items) {
+	        for (DigitalVideoDisc dvd : itemsOrdered) {
 	            if (dvd.getId() == id) {
 	                return dvd;
 	            }

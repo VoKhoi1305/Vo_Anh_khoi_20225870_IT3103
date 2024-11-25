@@ -12,6 +12,7 @@ public class DigitalVideoDisc {
 	public String getTitle() {
 		return title;
 	}
+	
 	public void setTitle(String title) {
 		this.title = title;
 	}
@@ -29,6 +30,9 @@ public class DigitalVideoDisc {
 	}
 	public int getLength() {
 		return length;
+	}
+	public int getid() {
+		return id;
 	}
 	public void setLength(int length) {
 		this.length = length;
