@@ -581,7 +581,6 @@
         <tags>EditorStack</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>active</tags>
-        <tags>noFocus</tags>
         <children xsi:type="basic:Part" xmi:id="_eSrKM6p_Ee-YSuTBaQ9_Gg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Aims.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Aims.java&quot; partName=&quot;Aims.java&quot; title=&quot;Aims.java&quot; tooltip=&quot;AimsProjects/src/Aims/Aims.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/AimsProjects/src/Aims/Aims.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;314&quot; selectionOffset=&quot;638&quot; selectionTopPixel=&quot;91&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
@@ -613,7 +612,7 @@
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_Lg59QKrsEe--XYLzwahZlQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TestPassingParameter.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;TestPassingParameter.java&quot; partName=&quot;TestPassingParameter.java&quot; title=&quot;TestPassingParameter.java&quot; tooltip=&quot;AimsProjects/src/Aims/TestPassingParameter.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/AimsProjects/src/Aims/TestPassingParameter.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;906&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;TestPassingParameter.java&quot; partName=&quot;TestPassingParameter.java&quot; title=&quot;TestPassingParameter.java&quot; tooltip=&quot;AimsProjects/src/Aims/TestPassingParameter.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/AimsProjects/src/Aims/TestPassingParameter.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;908&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
@@ -929,7 +928,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_eSrLL6p_Ee-YSuTBaQ9_Gg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_z-rpEKrrEe--XYLzwahZlQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_eSsaaap_Ee-YSuTBaQ9_Gg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_-MmZIKrsEe-zoNZ2NHx3sQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_eSsaaap_Ee-YSuTBaQ9_Gg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_eSrLPKp_Ee-YSuTBaQ9_Gg" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -937,8 +936,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_eSrLPqp_Ee-YSuTBaQ9_Gg" elementId="org.eclipse.ui.workbench.edit">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_z-uFUKrrEe--XYLzwahZlQ" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_eSsYUKp_Ee-YSuTBaQ9_Gg"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_z-usYKrrEe--XYLzwahZlQ" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_eSsY9qp_Ee-YSuTBaQ9_Gg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_-MnnQKrsEe-zoNZ2NHx3sQ" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" command="_eSsYUKp_Ee-YSuTBaQ9_Gg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_-Mo1YKrsEe-zoNZ2NHx3sQ" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_eSsY9qp_Ee-YSuTBaQ9_Gg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_eSrLQqp_Ee-YSuTBaQ9_Gg" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -971,7 +970,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_eSrLlKp_Ee-YSuTBaQ9_Gg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_z-vTcarrEe--XYLzwahZlQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_eSsaDKp_Ee-YSuTBaQ9_Gg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_-MqDgKrsEe-zoNZ2NHx3sQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_eSsaDKp_Ee-YSuTBaQ9_Gg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_eSrLoKp_Ee-YSuTBaQ9_Gg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

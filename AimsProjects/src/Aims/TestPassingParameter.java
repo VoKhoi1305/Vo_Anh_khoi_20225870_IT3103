@@ -23,8 +23,5 @@ public class TestPassingParameter {
 			dvd.setTitle(title);
 			dvd = new DigitalVideoDisc(oldTitle);	
 	}
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> e7dcad858175606d4b6eec71b40c9c71e09ce4f5
