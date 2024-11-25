@@ -1,0 +1,32 @@
+2.1 
+public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+		    if (totalItems + dvdList.length <= MAX_NUMBER_OEDERED) {
+		        for (int i = 0; i < dvdList.length; i++) {
+		            itemsOrdered[totalItems] = dvdList[i]; 
+		            totalItems++; 
+		        }
+		    } else {
+		        System.out.println("The cart is full.");
+		    }
+		}
+	
+	 public void addDigitalVideoDisc(DigitalVideoDisc... dvds) {
+	    if (totalItems + dvds.length <= MAX_NUMBER_OEDERED) {
+	        for (int i = 0; i < dvds.length; i++) {
+	            itemsOrdered[totalItems] = dvds[i]; 
+	            totalItems++; 
+	        }
+	    } else {
+	        System.out.println("The cart is almost full. Cannot add all DVDs!");
+	    }
+	}
+Em ưu tiên sử dụng phương thức với đầu vào không xác định do khi sử dụng mảng sẽ cần có 1 bước để tạo mảng trước khi có thể gọi phương thức. còn với đầu vào không xác định thì không cần 
+
+3 Java là một ngôn ngữ Pass by Value (truyền tham trị)
+Khi gọi swap(jungleDVD, cinderellaDVD), thuộc tính title của hai đối tượng jungleDVD và cinderellaDVD không thay đổi vì:
+•	Trong Java, khi truyền tham số vào phương thức, một bản sao của tham chiếu đến đối tượng được truyền vào, chứ không phải tham chiếu thực sự.
+•	Điều này có nghĩa là các tham chiếu bên trong phương thức swap (o1 và o2) chỉ là bản sao, và việc hoán đổi chúng trong phương thức không ảnh hưởng đến các tham chiếu gốc bên ngoài (jungleDVD và cinderellaDVD).
+•	Kết quả là thuộc tính title của các đối tượng gốc không thay đổi, vì trong phương thức không có hành động trực tiếp nào thay đổi nội dung của các đối tượng
+Khi gọi changeTitle(jungleDVD, cinderellaDVD.getTitle()), thuộc tính title của jungleDVD bị thay đổi vì:
+•	Dù chỉ truyền một bản sao của tham chiếu vào phương thức, bản sao này vẫn trỏ đến cùng một đối tượng trong bộ nhớ. Vì vậy, khi gọi dvd.setTitle(title) trong phương thức, thuộc tính title của đối tượng mà tham chiếu dvd trỏ đến (ở đây là jungleDVD) sẽ bị thay đổi trực tiếp.
+•	Tuy nhiên, nếu bên trong phương thức thực hiện việc gán dvd cho một đối tượng mới (ví dụ: dvd = new DigitalVideoDisc(oldTitle)), điều này chỉ làm thay đổi tham chiếu bản sao trong phạm vi của phương thức, không ảnh hưởng đến tham chiếu gốc (jungleDVD) bên ngoài.

@@ -34,6 +34,13 @@ public class Cart {
 	    }
 	}
 	 
+	 public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+		 if (totalItems + 2 <= MAX_NUMBER_OEDERED) {
+			 addDigitalVideoDisc(dvd1);
+			 addDigitalVideoDisc(dvd2);
+		 }
+	 }
+	 
 	public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         boolean found = false;
         for (int i = 0; i < totalItems; i++) {

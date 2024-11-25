@@ -22,10 +22,10 @@ public class Aims {
 	     anOrder2.addDigitalVideoDisc(dvdList);
 	     System.out.println("Total Cost after adding DVDs via array: " + anOrder2.totalCost());
 			
-			System.out.println("Total Cost is: ");
-			System.out. println(anOrder.totalCost());
-			anOrder.removeDigitalVideoDisc(dvd2); 
-			System.out.println("Total Cost is: ");
-			System.out. println(anOrder.totalCost());
+//			System.out.println("Total Cost is: ");
+//			System.out. println(anOrder.totalCost());
+//			anOrder.removeDigitalVideoDisc(dvd2); 
+//			System.out.println("Total Cost is: ");
+//			System.out. println(anOrder.totalCost());
 			}
 	}
