@@ -78,7 +78,7 @@ public class Cart {
 	
 	 public DigitalVideoDisc searchById(int id) {
 	        for (DigitalVideoDisc dvd : itemsOrdered) {
-	            if (dvd.getId() == id) {
+	            if (dvd.getid() == id) {
 	                return dvd;
 	            }
 	        }
@@ -88,7 +88,7 @@ public class Cart {
 	    // Search DVDs by title
 	    public void searchByTitle(String title) {
 	        boolean found = false;
-	        for (DigitalVideoDisc dvd : items) {
+	        for (DigitalVideoDisc dvd : itemsOrdered) {
 	            if (dvd.isMatch(title)) {
 	                System.out.println(dvd);
 	                found = true;
