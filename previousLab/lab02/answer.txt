@@ -1,0 +1,1 @@
+JAVA có cho phép tạo constructure cho các tham số khác nhau

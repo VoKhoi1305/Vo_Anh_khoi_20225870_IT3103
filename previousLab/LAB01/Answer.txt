@@ -1,0 +1,53 @@
+Câu 1:
+    Nếu người dùng chọn "cancel" tức là khác với lựa chọn yes 
+    ==> điều kiện Yes_Option sẽ trả về False nên kết quả là "NO" tương tự với việc chọn "No"
+
+
+Câu 2:
+Để chọn "I do", "I don't"
+import javax.swing. JOptionPane;
+    public class ChoosingOption{
+    public static void main(String[] args){
+        Object[] options = {"I do", "I don't"};
+        
+        // Display the option dialog with custom buttons
+        int option = JOptionPane.showOptionDialog(
+                null, 
+                "Do you want to change to the first class ticket?", 
+                "Custom Option Dialog", 
+                JOptionPane.YES_NO_OPTION, 
+                JOptionPane.QUESTION_MESSAGE, 
+                null, 
+                options, 
+                options[0]
+        );
+
+    JOptionPane. showMessageDialog(null,"You've chosen: "+ (option == JOptionPane.YES_OPTION?"Yes":"No"));
+
+    System.exit(0);
+    }
+}
+
+Để chọn "Yes", "No"
+    import javax.swing. JOptionPane;
+    public class ChoosingOption{
+    public static void main(String[] args){
+        Object[] options = {"Yes", "No"};
+        
+        // Display the option dialog with custom buttons
+        int option = JOptionPane.showOptionDialog(
+                null, 
+                "Do you want to change to the first class ticket?", 
+                "Custom Option Dialog", 
+                JOptionPane.YES_NO_OPTION, 
+                JOptionPane.QUESTION_MESSAGE, 
+                null, 
+                options, 
+                options[0]
+        );
+
+    JOptionPane. showMessageDialog(null,"You've chosen: "+ (option == JOptionPane.YES_OPTION?"Yes":"No"));
+
+    System.exit(0);
+    }
+}
