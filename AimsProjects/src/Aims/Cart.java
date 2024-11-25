@@ -22,6 +22,8 @@ public class Cart {
 		    }
 		}
 	
+	 
+	 
 	 public void addDigitalVideoDisc(DigitalVideoDisc... dvds) {
 	    if (totalItems + dvds.length <= MAX_NUMBER_OEDERED) {
 	        for (int i = 0; i < dvds.length; i++) {
@@ -58,4 +60,43 @@ public class Cart {
         }
         return total;
     }
+	
+	
+	public void print() {
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+
+        double totalCost = 0;
+        for (int i = 0; i < totalItems; i++) {
+            DigitalVideoDisc dvd = itemsOrdered[i];
+            System.out.println((i + 1) + ". " + dvd);
+            totalCost += dvd.getCost();
+        }
+        System.out.println("Total cost: " + totalCost + " $");
+        System.out.println("***************************************************");
+    }
+	
+	 public DigitalVideoDisc searchById(int id) {
+	        for (DigitalVideoDisc dvd : items) {
+	            if (dvd.getId() == id) {
+	                return dvd;
+	            }
+	        }
+	        return null; // Return null if not found
+	    }
+
+	    // Search DVDs by title
+	    public void searchByTitle(String title) {
+	        boolean found = false;
+	        for (DigitalVideoDisc dvd : items) {
+	            if (dvd.isMatch(title)) {
+	                System.out.println(dvd);
+	                found = true;
+	            }
+	        }
+
+	        if (!found) {
+	            System.out.println("No DVD found with the title: " + title);
+	        }
+	    }
 }
