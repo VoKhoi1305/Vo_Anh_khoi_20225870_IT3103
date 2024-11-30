@@ -1,13 +1,7 @@
 package hust.soict.dsai.aims.media;
-
-import java.util.ArrayList;
 import java.util.ArrayList;
 import java.util.List;
-public class Book {
-	private int id;
-	private String title;
-	private String category;
-	private float cost;
+public class Book extends Media {
 	private List<String> authors = new ArrayList<String>();
 	
 	public int getId() {
