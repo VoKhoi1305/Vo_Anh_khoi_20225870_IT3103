@@ -1,5 +1,6 @@
 package hust.soict.dsai.aims.media;
-
+import java.util.Comparator;
+import java.util.Objects;
 public abstract class Media {
 	protected int id; 
 	protected String title;
@@ -37,6 +38,15 @@ public abstract class Media {
 	public void setCost(float cost) {
 		this.cost = cost;
 	}
-	
+	 public boolean isMatch(String key){
+	        return getTitle().equalsIgnoreCase(key);
+	    }
+
+	    public boolean equals(Object obj) {
+	        if(!(obj instanceof Media)){
+	            return false;
+	        }
+	        return Objects.equals(this.title, ((Media) obj).getTitle());
+	    }
 	 
 }
