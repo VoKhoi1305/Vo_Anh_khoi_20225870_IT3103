@@ -1,5 +1,5 @@
 package hust.soict.dsai.aims.cart;
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media;
 
 public class Cart {
 	public static final int MAX_NUMBER_OEDERED = 20;
