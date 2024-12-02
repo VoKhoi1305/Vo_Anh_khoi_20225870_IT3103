@@ -1,7 +1,7 @@
 
 package hust.soict.dsai.aims.media;
 
-public class DigitalVideoDisc extends Disc {
+public class DigitalVideoDisc extends Disc implements Playable {
 	private String director;
 	private int length;
 	private static int nbDigitalVideoDiscs = 0;
@@ -31,53 +31,38 @@ public class DigitalVideoDisc extends Disc {
 	}
 
 
-	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
-		super();
-		nbDigitalVideoDiscs++;
-		this.id = nbDigitalVideoDiscs;
-		this.title = title;
-		this.category = category;
-		this.director = director;
-		this.length = length;
-		this.cost = cost;
-	}
 	
 
 	public DigitalVideoDisc(String title) {
-		super();
 		nbDigitalVideoDiscs++;
-		this.id = nbDigitalVideoDiscs;
-		this.title = title;
-	}
-	public DigitalVideoDisc(String category, String director, float cost) {
-		super();
-		nbDigitalVideoDiscs++;
-		this.id = nbDigitalVideoDiscs;
-		this.category = category;
-		this.director = director;
-		this.cost = cost;
-	}
-	public DigitalVideoDisc(String title, String category, String director, float cost) {
-		super();
-		nbDigitalVideoDiscs++;
-		this.id = nbDigitalVideoDiscs;
-		this.title = title;
-		this.category = category;
-		this.director = director;
-		this.cost = cost;
-	}
-	 public String toString() {
-	        return "DVD - " + title + " - " + category + " - " + director + " - " + length + " mins: " + cost + " $";
-	 }
+        super(title, null, 0, 0, null);
+    }
 
-	    // isMatch method
-	    public boolean isMatch(String title) {
-	        return this.title.equalsIgnoreCase(title);
-	 }
-	
+    public DigitalVideoDisc(String category, String title, float cost) {
+    	nbDigitalVideoDiscs++;
+        super(title, category, cost, 0, null);
+    }
+
+    public DigitalVideoDisc(String director, String category, String title, float cost) {
+    	nbDigitalVideoDiscs++;
+        super(title, category, cost, 0, director);
+    }
+
+    public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
+    	nbDigitalVideoDiscs++;
+    	super(title, category, cost, length, director);
+    }
+
 	  public static int getNbDigitalVideoDiscs() {
 	        return nbDigitalVideoDiscs;
 	    }
-
-
+	  
+	  public void play() {
+	        System.out.println("Playing DVD: " + getTitle());
+	        System.out.println("Length DVD: " + getLength());
+	    }
+	  
+	  public String toString() {
+	        return "DVD - " + getTitle() + " - " + getCategory() + " - " + director + " - " + length + ": " + getCost() + " $";
+	    }
 }

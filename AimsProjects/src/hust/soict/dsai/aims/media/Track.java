@@ -1,8 +1,9 @@
 
 package hust.soict.dsai.aims.media;
 
+import java.util.Objects;
 
-public class  Track implements Playable {
+public class  Track implements Playable implements Playable {
 	private String title;
 	private int length;
 	
@@ -32,15 +33,17 @@ public class  Track implements Playable {
 	}
 	
 	public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Track track = (Track) obj;
-        return title.equals(track.title) && length == track.length;
+        if(!(obj instanceof Track)) return false;
+        else {
+            return Objects.equals(this.title, ((Track) obj).getTitle()) && this.length == ((Track) obj).getLength();
+        }
     }
 	@Override
 	public void play() {
-		// TODO Auto-generated method stub
-		
+
+			System.out.println("Playing DVD: " + this.getTitle());
+			System.out.println("DVD length: " + this.getLength());
+
 	}
 
 }

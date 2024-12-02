@@ -42,5 +42,9 @@ public Book(int id, String title, String category, float cost, List<String> auth
 	public Book(){
 		super();
 	}
+	
+	public String toString() {
+        return super.toString() + " Authors: " + String.join(", ", authors);
+    }
 }
 
