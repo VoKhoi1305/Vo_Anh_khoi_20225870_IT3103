@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 public class Book extends Media {
 	private List<String> authors = new ArrayList<String>();
-	
 
 	public List<String> getAuthors() {
 		return authors;
@@ -43,9 +42,5 @@ public Book(int id, String title, String category, float cost, List<String> auth
 	public Book(){
 		super();
 	}
-	
-	public String toString() {
-        return super.toString() + " Authors: " + String.join(", ", authors);
-    }
 }
 
