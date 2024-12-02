@@ -1,0 +1,7 @@
+10:
+   	 -Nếu đối tượng không phải là một thể hiện của Media, phương thức sẽ trả về false để biểu thị rằng hai đối tượng không bằng nhau.
+12
+	-Lớp Media  nên implement Comparable<Media>
+	-Để phản ánh thứ tự sắp xếp theo title và cost, cần overwrite phương thức compareTo()
+	-Không, chúng ta chỉ có thể định nghĩa một quy tắc sắp xếp mặc định duy nhất khi sử dụng Comparable
+	-Để xử lý trường hợp DVDs có quy tắc sắp xếp riêng biệt, bạn có thể ghi đè phương thức compareTo() trong lớp con DigitalVideoDisc và định nghĩa cách sắp xếp riêng cho DVDs. 
