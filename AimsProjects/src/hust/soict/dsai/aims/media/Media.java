@@ -8,10 +8,15 @@ public abstract class Media {
 	public Media() {
 		// TODO Auto-generated constructor stub
 	}
-	public int getID() {
+	  public Media(String title, String category, float cost){
+	        this.title = title;
+	        this.category = category;
+	        this.cost = cost;
+	   }
+	public int getId() {
 		return id;
 	}
-	public void setID(int iD) {
+	public void setId(int iD) {
 		id = iD;
 	}
 	public String getTitle() {
@@ -33,5 +38,5 @@ public abstract class Media {
 		this.cost = cost;
 	}
 	
-
+	 
 }
