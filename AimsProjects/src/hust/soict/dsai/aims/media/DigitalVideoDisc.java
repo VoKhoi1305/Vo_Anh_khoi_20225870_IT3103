@@ -30,9 +30,6 @@ public class DigitalVideoDisc extends Disc implements Playable {
 		this.length = length;
 	}
 
-
-	
-
 	public DigitalVideoDisc(String title) {
 		nbDigitalVideoDiscs++;
         super(title, null, 0, 0, null);
