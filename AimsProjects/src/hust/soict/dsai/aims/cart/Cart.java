@@ -1,67 +1,103 @@
 package hust.soict.dsai.aims.cart;
-import java.util.ArrayList;
+
+import java.util.*;
 
 import hust.soict.dsai.aims.media.Media;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Cart {
-	public static final int MAX_NUMBER_OEDERED = 20;
-	 private ArrayList<Media> itemsOrdered = new ArrayList<>();
-	//add media
-	   public void addMedia(Media media){
-	      if(itemsOrdered.size() >= MAX_NUMBER_OEDERED){
-	         System.out.println("The cart is full");
-	      }
-	      else {
-	         itemsOrdered.add(media);
-	         System.out.println("The media has been added");
-	      }
-	   }
-
-	   //remove media
-	   public void removeMedia(Media media){
-	      if(itemsOrdered.contains(media)){
-	         itemsOrdered.remove(media);
-	         System.out.println("The media has been removed");
-	      }
-	      else {
-	         System.out.println("Not found media");
-	      }
-	   }
-
-	   public float totalCost(){
-	      float total = 0;
-	      for (Media media : itemsOrdered) {
-	         total += media.getCost();
-	      }
-	      return total;
-	   }
-	   public void print(){
-		      System.out.println("***********************CART***********************");
-		      System.out.println("Ordered Items:");
-		      for(int i = 0;i < itemsOrdered.size();i++){
-		         System.out.println((i + 1) + ". " + itemsOrdered.get(i).toString());
-		      }
-		      System.out.printf("Total cost: %.2f $%n", totalCost());
-		      System.out.println("***************************************************");
-		   }
+	public static final int MAX_NUMBERS_ORDERED = 20;
+	public ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
 	
-	 public Media searchById(int id) {
-	        for (Media dvd : itemsOrdered) {
-	            if (dvd.getId() == id) {
-	                return dvd;
-	            }
-	        }
-	        return null; 
+	public float totalCost() {
+		float totalCost = 0;
+        for (Media item : itemsOrdered) {
+            totalCost += item.getCost();
+        }
+        return totalCost;
+    }
+	
+	public void addItem(Media item) {
+	    if (itemsOrdered.size() >= MAX_NUMBERS_ORDERED) {
+	        System.out.println("The cart is full. Cannot add " + item.getTitle() + ".");
+	        return;
 	    }
+	    
+	    if (itemsOrdered.contains(item)) { // Kiểm tra xem item đã có trong giỏ hàng hay chưa
+	        System.out.println(item.getTitle() + " is already in the cart.");
+	        return;
+	    }
+	    
+	    itemsOrdered.add(item); // Thêm vào nếu chưa tồn tại
+	    System.out.println(item.getTitle() + " has been added to the cart.");
+	}
 
-	   
-	   public Media searchByTitle(String title){
-		      for(Media media : itemsOrdered){
-		         if(media.isMatch(title)){
-		            return media;
-		         }
-		      }
-		      return null;
-	 }
+    public void removeItem(Media item) {
+        if (itemsOrdered.remove(item)) {
+            System.out.println(item.getTitle() + " has been removed from the cart.");
+        } else {
+            System.out.println(item.getTitle() + " is not in the cart.");
+        }
+    }
+    
+    public void printCart() {
+        if (itemsOrdered.isEmpty()) {
+            System.out.println("The cart is empty.");
+        } else {
+            System.out.println("Cart:");
+            for (Media item : itemsOrdered) {
+                System.out.println("- " + item.getTitle() + " - " + item.getCategory() + " - " + item.getCost());
+            }
+        }
+    }
+    
+    public Media searchCart(String title) {
+        for (Media item : itemsOrdered) {
+            if (item.getTitle().equalsIgnoreCase(title)) {
+            	System.out.println("- " + item.getTitle());
+            	return item;
+            }
+        }
+        System.out.println("NOT FOUND");
+        return null;
+    }
+    
+    public void deleteCart() {
+    	itemsOrdered.clear();
+    }
+    
+    // Sort by title 
+    public void sortByTitle() {
+        Collections.sort(itemsOrdered, Media.COMPARE_BY_TITLE_COST);
+    }
 
+    // Sort by cost
+    public void sortByCost() {
+        Collections.sort(itemsOrdered, Media.COMPARE_BY_COST_TITLE);
+    }
+    
+    public ObservableList<Media> getItemsOrdered() {
+        return itemsOrdered;
+    }
+	
+    public ObservableList<Media> searchID(int id) {
+        ObservableList<Media> result = FXCollections.observableArrayList();
+        for (Media media : itemsOrdered) {
+            if (media.getId() == id) {
+                result.add(media);
+            }
+        }
+        return result;
+    }
+    
+    public ObservableList<Media> searchTitle(String title) {
+        ObservableList<Media> result = FXCollections.observableArrayList();
+        for (Media media : itemsOrdered) {
+            if (media.getTitle().toLowerCase().contains(title.toLowerCase())) {
+                result.add(media);
+            }
+        }
+        return result;
+    }
 }
