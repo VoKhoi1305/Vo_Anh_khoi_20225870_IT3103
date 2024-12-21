@@ -9280,3 +9280,10 @@ java.nio.file.NoSuchFileException: D:\Vo_Anh_khoi_20225870_IT3103\.metadata\.plu
 	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:410)
 	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:388)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 2 2 2024-12-21 11:28:19.308
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-12-21 11:28:19.308
+!MESSAGE The project description file (.project) for 'Test' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-12-21 11:28:19.308
+!MESSAGE The project description file (.project) for 'TestjavaFX' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
