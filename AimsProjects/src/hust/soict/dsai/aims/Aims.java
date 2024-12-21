@@ -11,7 +11,7 @@ import hust.soict.dsai.aims.store.Store;
 import hust.soict.dsai.aims.media.Playable;
 
 public class Aims {
-    private static Store store = new Store();
+    public static Store store = new Store();
     public static Cart cart = new Cart();
     private static Scanner scanner = new Scanner(System.in);
 

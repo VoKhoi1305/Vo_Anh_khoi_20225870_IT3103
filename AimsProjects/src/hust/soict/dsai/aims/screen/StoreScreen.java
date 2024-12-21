@@ -27,9 +27,9 @@ import hust.soict.dsai.aims.media.Playable;
 import hust.soict.dsai.aims.store.Store;
 
 public class StoreScreen extends JFrame {
-//public static AddDVDscreen addDVDscreen;
-//public static AddCDscreen addCDscreen;
-//public static AddBookscreen addBookscreen;
+public static AddDVDscreen addDVDscreen;
+public static AddCDscreen addCDscreen;
+public static AddBookscreen addBookscreen;
 	public static CartScreen cartScreen;
 	private Store store;
 
@@ -135,26 +135,26 @@ public class StoreScreen extends JFrame {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			String menuitem = e.getActionCommand();
-//	        	if(menuitem.equals("Add DVD"))
-//	        		  {  setVisible(false);
-//	        		  	addDVDscreen= new AddDVDscreen();
-//	        		  	addDVDscreen.setSize(934,595);
-//	        		    
-//	        		  }
-//	        	else if(menuitem.equals("Add CD"))
-//	        	{
-//	        		setVisible(false);
-//	        		addCDscreen=new AddCDscreen();
-//	        		addCDscreen.setSize(934,595);
-//	        	
-//	        	}
-//	        	else if(menuitem.equals("Add Book"))
-//	        	{
-//	        		setVisible(false);
-//	        		addBookscreen=new AddBookscreen();
-//	        		addBookscreen.setSize(934,595);
-//	        	}
-			if (menuitem.equals("View cart")) {
+	        	if(menuitem.equals("Add DVD"))
+	        		  {  setVisible(false);
+	        		  	addDVDscreen= new AddDVDscreen();
+	        		  	addDVDscreen.setSize(934,595);
+	        		    
+	        		  }
+	        	else if(menuitem.equals("Add CD"))
+	        	{
+	        		setVisible(false);
+	        		addCDscreen=new AddCDscreen();
+	        		addCDscreen.setSize(934,595);
+	        	
+	        	}
+	        	else if(menuitem.equals("Add Book"))
+	        	{
+	        		setVisible(false);
+	        		addBookscreen=new AddBookscreen();
+	        		addBookscreen.setSize(934,595);
+	        	}
+	        	else if (menuitem.equals("View cart")) {
 				setVisible(false);
 				cartScreen = new CartScreen(Aims.cart);
 				cartScreen.setSize(1024, 768);

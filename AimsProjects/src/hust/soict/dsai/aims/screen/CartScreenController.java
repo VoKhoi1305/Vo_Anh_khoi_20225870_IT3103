@@ -76,6 +76,7 @@ public class CartScreenController {
 
 			@Override
 			public void changed(ObservableValue<? extends Media> arg0, Media arg1, Media arg2) {
+				// TODO Auto-generated method stub
 				if (arg2 != null)
 					updateButtonBar(arg2);
 			}
@@ -100,29 +101,29 @@ public class CartScreenController {
 			}
 
 			private void showFilteredMedia(String newValue) {
-				// Check if the search field is empty
+				
 				if (newValue.length() == 0) {
-					// Reset to show all media items
+					
 					tblMedia.setItems(cart.getItemsOrdered());
-					setTotal(); // Update the total cost
+					setTotal(); 
 				} else {
-					// Check if filter by ID is selected
+					
 					if (rbtnFilterID.isSelected()) {
 						try {
-							// Parse the ID and filter items by ID
+							
 							int id = Integer.parseInt(newValue);
-							tblMedia.setItems(cart.searchID(id)); // Ensure this returns ObservableList<Media>
-							setTotal(); // Update the total cost
+							tblMedia.setItems(cart.searchID(id)); 
+							setTotal(); 
 						} catch (NumberFormatException e) {
-							// Handle invalid ID input (not a valid integer)
+						
 							System.out.println("Invalid ID entered: " + newValue);
-							// Optionally, show a message to the user
+						
 						}
 					}
 
-					// Check if filter by Title is selected
+					
 					if (rbtnFilterTitle.isSelected()) {
-						// Filter items by title
+					
 						tblMedia.setItems(cart.searchTitle(newValue)); // Ensure this returns ObservableList<Media>
 						setTotal(); // Update the total cost
 					}
@@ -195,37 +196,37 @@ public class CartScreenController {
 
 	}
 
-//	@FXML
-//	void AddBookPressed(ActionEvent event) {
-//		// Add Book
-//		StoreScreen.cartScreen.setVisible(false);
-//		AddBookscreen addBookscreen = new AddBookscreen();
-//		addBookscreen.setSize(934, 595);
-//	}
-//
-//	@FXML
-//	void AddCDPressed(ActionEvent event) {
-//		// Add CD
-//		StoreScreen.cartScreen.setVisible(false);
-//		AddCDscreen addCDscreen = new AddCDscreen();
-//		addCDscreen.setSize(934, 595);
-//
-//	}
-//
-//	@FXML
-//	void AddDVDPressed(ActionEvent event) {
-//		// Add DVD
-//		StoreScreen.cartScreen.setVisible(false);
-//		AddDVDscreen addDVDscreen = new AddDVDscreen();
-//		addDVDscreen.setSize(934, 595);
-//
-//	}
-//
-//	@FXML
-//	void ViewStorePressed(ActionEvent event) {
-//		new StoreScreen(Aims.store);
-//		StoreScreen.cartScreen.setVisible(false);
+	@FXML
+	void AddBookPressed(ActionEvent event) {
+		// Add Book
+		StoreScreen.cartScreen.setVisible(false);
+		AddBookscreen addBookscreen = new AddBookscreen();
+		addBookscreen.setSize(934, 595);
+	}
 
-//	}
+	@FXML
+	void AddCDPressed(ActionEvent event) {
+		// Add CD
+		StoreScreen.cartScreen.setVisible(false);
+		AddCDscreen addCDscreen = new AddCDscreen();
+		addCDscreen.setSize(934, 595);
+
+	}
+
+	@FXML
+	void AddDVDPressed(ActionEvent event) {
+		// Add DVD
+		StoreScreen.cartScreen.setVisible(false);
+		AddDVDscreen addDVDscreen = new AddDVDscreen();
+		addDVDscreen.setSize(934, 595);
+
+	}
+
+	@FXML
+	void ViewStorePressed(ActionEvent event) {
+		new StoreScreen(Aims.store);
+		StoreScreen.cartScreen.setVisible(false);
+
+	}
 
 }

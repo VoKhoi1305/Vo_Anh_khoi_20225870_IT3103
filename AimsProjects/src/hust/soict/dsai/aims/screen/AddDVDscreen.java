@@ -2,35 +2,30 @@ package hust.soict.dsai.aims.screen;
 
 import java.io.IOException;
 
-import javax.swing.*;
+import javax.swing.JFrame;
 
-import hust.soict.dsai.aims.Aims;
-import hust.soict.dsai.aims.cart.Cart;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-public class CartScreen extends JFrame{
-	private Cart cart;
-	public CartScreen(final Cart cart)
-	{   super();
-	
-		this.cart=cart;
-		
-		final JFXPanel fxPanel = new JFXPanel();
-		
+public class AddDVDscreen extends JFrame {
+	public AddDVDscreen()
+	{ 
+		super();		
+		final JFXPanel fxPanel = new JFXPanel();	
 		this.add(fxPanel);
 		
-		this.setTitle("Cart");
+		this.setTitle("Add DVD");
 		this.setVisible(true);
 		Platform.runLater(new Runnable() {
 			public void run()
 			{
 				try {
-					FXMLLoader loader = new FXMLLoader(getClass().getResource("Cart.fxml"));
-					CartScreenController controller = new CartScreenController(cart);
+					FXMLLoader loader = new FXMLLoader(getClass().getResource("AddDVD.fxml"));
+					AddDVDController controller =
+							  new AddDVDController();
 					loader.setController(controller);
 					Parent root= loader.load();
 					fxPanel.setScene(new Scene(root));
@@ -41,9 +36,7 @@ public class CartScreen extends JFrame{
 				}
 			}
 		});
-	
 
-}
-
+	} 
 
 }
